@@ -1,66 +1,220 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-/* Reset and base styles  */
-* {
-	padding: 0px;
-	margin: 0px;
-	border: none;
+
+:root {
+	--accent-color: #ff0070;
+	--background-color: #000028;
+	--color-text: #F1B2CE;
 }
 
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
+img {
+	object-position: center;
+	object-fit: cover;
+	height: 100%;
+	margin: auto;
+	width: 100%;
 }
-
-/* Links */
-
-a, a:link, a:visited  {
-	text-decoration: none;
-}
-
-a:hover  {
-	text-decoration: none;
-}
-
 
 .page {
-	background-color: #000028;
-	color: #F1B2CE;
+	background-color: var(--background-color);
+	color: var(--color-text);
 	font-family: 'IBM Plex mono', sans-serif;
 	font-weight: bold;
 	font-size: 18px;
 	max-width: 1024px;
-
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-}
-
-.header {
-	background-image: url("/images/cover-image-dark.png");
-	height: 768px;
-	width: 1024px;
+	min-width: 375px;
+	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	background-image: url("/images/cover-image-dark.png");
+	padding: 25px ;
+  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
+.page.theme_light {
+	--accent-color: #FF8DCB;
+	--background-color: #FFF1F7;
+	--color-text: #353430;
+	background-image: url("/images/cover-image-light.png");
+}
+
+.header {
+
+	height: 768px;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-template-areas:
+            ". . Rec"
+            ". . nav-big"
+            "tittle tittle tittle"
+            "paragrapgh paragrapgh paragrapgh"
+            "border . .";
+}
+
+.header__theme-menu {
+	grid-area: nav-big;
+	align-self: start;
+	justify-self: end;
+
+
+}
+.header__theme-menu-list{
+	display: flex;
+	gap: 15px;
+	flex-direction: column;
+}
+
+.header__theme-menu-button {
+    background-color: transparent;
+	color: var(--accent-color);
+	border: none;
+	font-weight: normal;
+	text-transform: lowercase;
+}
+
+
+
 .title_no_background {
 	color: #FF0070;
 	line-height: 23.4px;
-
+	margin-block-end:30px;
+	font-size: 18px;
 }
 .title_with_background {
-	background-color: #FF0070;
+	background-color: var(--accent-color);
 	color: #000028;
 	line-height: 23.4px;
 }
 
 .header-tittle {
-
+	grid-area: tittle;
 	color: #DB00FF;
-	font-size: 120px;
+	font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
 	text-shadow:#FF0070 5px 5px;
+
 }
 
 .header-paragraph {
-	width: 50%;
+	margin-left: 0;
+	grid-area: paragrapgh;
+	align-self: end;
 
 }
+.dot {
+	box-shadow:var(--accent-color) 2px -1px;
+	height: 40px;
+	width: 40px;
+	display: inline-block;
+	padding: 10px;
+}
+.dot-rec::before {
+	position: absolute;
+	content: "";
+	width: 15px;
+	height: 15px;
+	box-shadow:0 0 10px 5px var(--accent-color);
+	background-color: var(--accent-color);
+	border-radius: 50%;
+}
+.rec-tittle {
+	padding-top: 10px;
+	font-size: 18px;
+	font-weight: normal;
+	color: var(--accent-color);
+}
+.rec {
+	justify-self: end;
+	grid-area: Rec;
+	display: flex;
+
+}
+
+.border-down {
+	box-shadow:var(--accent-color) -2px 1px;
+	height: 40px;
+	width: 40px;
+	display: inline-block;
+
+	grid-area: border;
+	align-self: end;
+	margin-bottom: 20px;
+
+}
+.article {
+	margin-block-start:30px;
+
+}
+.article-why {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto;
+	grid-auto-flow: dense;
+	gap: 15px;
+}
+.title_no_background-first {
+	grid-row-start: 1;
+	grid-row-end: 3;
+
+}
+.title_no_background-second{
+	width: 300px;
+}
+.article-what {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+
+}
+
+.article-how {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	gap: 15px;
+}
+
+.title_no_background-third{
+	grid-row-start: 1;
+	grid-row-end: 8;
+}
+
+.main-paragraph {
+	padding:15px 0;
+	font-weight: normal;
+}
+.article-picture {
+	display: grid;
+	grid-template-columns: 1fr ;
+	grid-template-rows: auto;
+	gap: 15px;
+	margin-top: 10px;
+}
+
+.footer {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	margin-top: 10px;
+	height: 668px;
+}
+.footer .header-tittle {
+	grid-area: 2;
+	display: inline-block;
+
+}
+.footer .dot {
+	grid-area: 1;
+	justify-self: end;
+
+}
+
+.footer .border-down{
+	grid-area: 3;
+
+}
+h4.title_with_background {
+	font-weight: normal;
+	margin-top: 15px;
+}
+

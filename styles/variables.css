@@ -2,3 +2,60 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+@media (min-width: 720px) {
+	.header {
+		grid-template-areas:
+            ". nav-big Rec"
+            "b c nav-small"
+            "tittle tittle tittle"
+            "paragrapgh paragrapgh paragrapgh"
+            "border . .";
+	}
+	.header__theme-menu-list{
+
+		flex-direction: row;
+	}
+	.header__theme-menu {
+		align-self: start;
+	}
+	.header-paragraph {
+		margin-left: 50%;
+
+	}
+	.article-why {
+		grid-template-columns: 1fr minmax(300px, 2fr);
+	}
+	.article-what {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		gap: 15px;
+	}
+	.title_no_background-second {
+		grid-column-start: 1;
+		grid-column-end: 4;
+	}
+	.article-how {
+		grid-template-columns: 1fr 2fr;
+	}
+	.article-picture {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.img-sunset{
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+	.img-ice-cream{
+		grid-column-start: 3;
+		grid-row-start: 1;
+		grid-row-end: 3;
+	}
+	.img-tape {
+		grid-row-start: 2;
+		grid-row-end: 4;
+	}
+	.img-street {
+		grid-row-start: 3;
+		grid-column-start: 2;
+		grid-column-end: 4;
+	}
+}
