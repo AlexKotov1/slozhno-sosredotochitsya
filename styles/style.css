@@ -1,5 +1,66 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* Reset and base styles  */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+	text-decoration: none;
+}
+
+a:hover  {
+	text-decoration: none;
+}
+
 
 .page {
+	background-color: #000028;
+	color: #F1B2CE;
+	font-family: 'IBM Plex mono', sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+	max-width: 1024px;
+
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+
+.header {
+	background-image: url("/images/cover-image-dark.png");
+	height: 768px;
+	width: 1024px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.title_no_background {
+	color: #FF0070;
+	line-height: 23.4px;
+
+}
+.title_with_background {
+	background-color: #FF0070;
+	color: #000028;
+	line-height: 23.4px;
+}
+
+.header-tittle {
+
+	color: #DB00FF;
+	font-size: 120px;
+	text-shadow:#FF0070 5px 5px;
+}
+
+.header-paragraph {
+	width: 50%;
+
 }
