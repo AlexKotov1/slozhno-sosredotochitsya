@@ -48,7 +48,6 @@
 		grid-column-end: 4;
 	}
 
-
 	.article-picture {
 		grid-template-columns: 1fr 1fr 1fr;
 	}

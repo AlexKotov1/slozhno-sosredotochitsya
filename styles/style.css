@@ -68,11 +68,11 @@ img {
 }
 
 .header__theme-menu-button:focus {
-	border-bottom:1px solid var(--accent-color-two);
+	border-bottom: 1px solid var(--accent-color-two);
 }
 
 .header__theme-menu-button:hover {
-	border-bottom:1px solid var(--accent-color-two);
+	border-bottom: 1px solid var(--accent-color-two);
 }
 
 .header__theme-menu-button_active {
