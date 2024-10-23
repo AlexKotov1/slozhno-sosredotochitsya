@@ -5,8 +5,19 @@
 */
 
 .page.theme_light {
-	/* сохраните этот селектор в приведённом виде.
-	  Так стили написанные ниже будут иметь больший вес,
-	  чем стили в медиазапросе предпочтений пользователя
-	*/
+	--accent-color: #FF8DCB;
+	--background-color: #FFF1F7;
+	--color-text: #353430;
+	background-image: url("/images/cover-image-light.png");
+	--accent-color-two: #353430;
+	--header-color: #FF8DCB;
+
+	.dot-rec::before {
+		background-color: transparent;
+		box-shadow: none;
+	}
+
+	.rec-tittle {
+		color: transparent;
+	}
 }

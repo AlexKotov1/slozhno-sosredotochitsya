@@ -2,6 +2,25 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+@media (min-width: 375px) {
+	.article-why {
+		flex-direction: row;
+	}
+
+	.paragraphs-why {
+		max-width: 66%;
+	}
+
+	.header-tittle {
+		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+	}
+
+	.article-what {
+		flex-direction: row;
+	}
+}
+
 @media (min-width: 720px) {
 	.header {
 		grid-template-areas:
@@ -11,51 +30,64 @@
             "paragrapgh paragrapgh paragrapgh"
             "border . .";
 	}
-	.header__theme-menu-list{
 
+	.header__theme-menu-list {
 		flex-direction: row;
 	}
+
 	.header__theme-menu {
 		align-self: start;
 	}
+
 	.header-paragraph {
 		margin-left: 50%;
+	}
 
-	}
-	.article-why {
-		grid-template-columns: 1fr minmax(300px, 2fr);
-	}
-	.article-what {
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: auto;
-		gap: 15px;
-	}
 	.title_no_background-second {
 		grid-column-start: 1;
 		grid-column-end: 4;
 	}
-	.article-how {
-		grid-template-columns: 1fr 2fr;
-	}
+
+
 	.article-picture {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
-	.img-sunset{
+
+	.img-sunset {
 		grid-column-start: 1;
 		grid-column-end: 3;
 	}
-	.img-ice-cream{
+
+	.img-ice-cream {
 		grid-column-start: 3;
 		grid-row-start: 1;
 		grid-row-end: 3;
 	}
+
 	.img-tape {
 		grid-row-start: 2;
 		grid-row-end: 4;
 	}
+
 	.img-street {
 		grid-row-start: 3;
 		grid-column-start: 2;
 		grid-column-end: 4;
+	}
+
+	.article-how {
+		flex-direction: row;
+	}
+
+	.paragraphs-how {
+		max-width: 66%;
+	}
+
+	.paragraphs-what {
+		flex-direction: row;
+	}
+
+	.header-tittle {
+		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 	}
 }
