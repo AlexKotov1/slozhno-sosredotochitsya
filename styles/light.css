@@ -5,7 +5,6 @@
 */
 
 .page.theme_light {
-
 	--accent-color: #FF8DCB;
 	--background-color: #FFF1F7;
 	--color-text: #353430;
@@ -13,13 +12,12 @@
 	--accent-color-two: #353430;
 	--header-color: #FF8DCB;
 
-
-	.header__theme-menu-list::before{
+	.header__theme-menu-list::before {
 		background-color: transparent;
 		box-shadow: none;
 	}
 
-	.header__theme-menu-list::after{
+	.header__theme-menu-list::after {
 		color: transparent;
 	}
 }
