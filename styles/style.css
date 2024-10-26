@@ -35,7 +35,6 @@ img {
 .header__theme-menu {
 	align-self: center;
 	justify-self: end;
-
 }
 
 .header__theme-menu-list {
@@ -72,7 +71,6 @@ img {
 	line-height: 23.4px;
 	margin-block-end: 15px;
 	font-size: 18px;
-
 }
 
 .title_with_background {
@@ -80,7 +78,6 @@ img {
 	color: var(--color-text-general);
 	line-height: 23.4px;
 	font-size: 18px;
-
 }
 
 .header-tittle {
@@ -88,6 +85,8 @@ img {
 	font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 	text-shadow: var(--color-shadow) 5px 5px;
 	font-weight: bold;
+	align-self: center;
+	line-height: 82.5%;
 }
 
 .header-paragraph {
@@ -247,10 +246,6 @@ img {
 	.title_no_background {
 		width: 33%;
 	}
-
-
-
-
 
 	.title_no_background-second {
 		grid-column-start: 1;
