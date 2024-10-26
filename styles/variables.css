@@ -3,90 +3,34 @@
   и их переопределение под различные устройства
 */
 
-@media (min-width: 375px) {
-	.article-why {
-		flex-direction: row;
+:root {
+	--color-text-general: #000028;
+	--color-shadow: #FF0070;
+
+	@media (prefers-color-scheme: dark) {
+		--accent-color: #ff0070;
+		--background-color: #000028;
+		--color-text: #F1B2CE;
+		--accent-color-two: #ff0070;
+		--header-color: #DB00FF;
+		--background-image: url("../images/cover-image-dark.png");
 	}
 
-	.paragraphs-why {
-		max-width: 66%;
-	}
+	@media (prefers-color-scheme: light) {
+		--accent-color: #FF8DCB;
+		--background-color: #FFF1F7;
+		--color-text: #353430;
+		--background-image: url("../images/cover-image-light.png");
+		--accent-color-two: #353430;
+		--header-color: #FF8DCB;
 
-	.header-tittle {
-		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-	}
+		.header__theme-menu-list::before {
+			background-color: transparent;
+			box-shadow: none;
+		}
 
-	.article-what {
-		flex-direction: row;
-	}
-}
-
-@media (min-width: 720px) {
-	.header {
-		grid-template-areas:
-            ". nav-big Rec"
-            "b c nav-small"
-            "tittle tittle tittle"
-            "paragrapgh paragrapgh paragrapgh"
-            "border . .";
-	}
-
-	.header__theme-menu-list {
-		flex-direction: row;
-	}
-
-	.header__theme-menu {
-		align-self: start;
-	}
-
-	.header-paragraph {
-		margin-left: 50%;
-	}
-
-	.title_no_background-second {
-		grid-column-start: 1;
-		grid-column-end: 4;
-	}
-
-	.article-picture {
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-
-	.img-sunset {
-		grid-column-start: 1;
-		grid-column-end: 3;
-	}
-
-	.img-ice-cream {
-		grid-column-start: 3;
-		grid-row-start: 1;
-		grid-row-end: 3;
-	}
-
-	.img-tape {
-		grid-row-start: 2;
-		grid-row-end: 4;
-	}
-
-	.img-street {
-		grid-row-start: 3;
-		grid-column-start: 2;
-		grid-column-end: 4;
-	}
-
-	.article-how {
-		flex-direction: row;
-	}
-
-	.paragraphs-how {
-		max-width: 66%;
-	}
-
-	.paragraphs-what {
-		flex-direction: row;
-	}
-
-	.header-tittle {
-		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+		.header__theme-menu-list::after {
+			color: transparent;
+		}
 	}
 }
