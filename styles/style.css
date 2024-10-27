@@ -1,5 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
+* { outline: 1px solid red; }
 img {
 	object-position: center;
 	object-fit: cover;
@@ -20,21 +20,25 @@ img {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	padding: 20px;
+	padding: 0 20px;
 	background-image: var(--background-image);
 	/* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
 .header {
+	max-width: 1024px;
+	min-width: 375px;
 	height: 100vh;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
+	min-height: 668px;
 }
 
 .header__theme-menu {
 	align-self: center;
 	justify-self: end;
+	padding-top: 20px;
 }
 
 .header__theme-menu-list {
@@ -52,14 +56,19 @@ img {
 	padding: 0 13px;
 }
 
+.header__theme-menu-button:hover {
+	outline: 1px solid var(--color-buttom-hover);
+}
+
 .header__theme-menu-button:focus {
-	border-bottom: 1px solid var(--accent-color-two);
 	outline: none;
 }
 
-.header__theme-menu-button:hover {
+.header__theme-menu-button:focus-visible {
 	border-bottom: 1px solid var(--accent-color-two);
+	margin-bottom: -1px;
 }
+
 
 .header__theme-menu-button_active {
 	pointer-events: none;
@@ -69,7 +78,7 @@ img {
 .title_no_background {
 	color: var(--accent-color-two);
 	line-height: 23.4px;
-	margin-block-end: 15px;
+	margin-block-end: 30px;
 	font-size: 18px;
 }
 
@@ -80,7 +89,7 @@ img {
 	font-size: 18px;
 }
 
-.header-tittle {
+.tittle {
 	color: var(--header-color);
 	font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 	text-shadow: var(--color-shadow) 5px 5px;
@@ -99,6 +108,10 @@ img {
 	margin-block-start: 60px;
 }
 
+.main-section-what {
+	margin-block-start: 80px;
+}
+
 .main-section-why {
 	display: flex;
 	gap: 15px;
@@ -106,7 +119,15 @@ img {
 }
 
 .paragraphs-why {
-	display: block;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.article-main{
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
 }
 
 .title_no_background-second {
@@ -125,11 +146,11 @@ img {
 	display: flex;
 	gap: 15px;
 	flex-direction: column;
-	margin-bottom: 25px;
+	margin-block-start: 75px;
 }
 
 .main-paragraph {
-	padding: 15px 0;
+	gap: 151px;
 	font-weight: normal;
 }
 
@@ -138,20 +159,25 @@ img {
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
 	gap: 15px;
-	margin-top: 10px;
 }
 
 .footer {
 	display: grid;
 	grid-template-columns: 1fr;
-	margin-top: 70px;
 	height: 100vh;
 	position: relative;
+	min-height: 668px;
+	margin-block-start: 60px;
+	padding: 20px;
 }
 
-.footer .header-tittle {
+.footer .tittle {
 	text-align: center;
 	align-self: center;
+}
+
+.main-section-picture {
+	margin-block-start: 75px;
 }
 
 .link-text {
@@ -164,13 +190,16 @@ img {
 }
 
 .link-text:focus {
-	outline: 1px solid var(--color-text);
 	border: none;
+}
+
+.link-text:focus-visible {
+	outline: 1px solid var(--color-text);
 }
 
 .title_with_background-normal {
 	font-weight: normal;
-	margin-top: 10px;
+	margin-block-start: 18px;
 }
 
 .decorated-zone::after {
@@ -181,6 +210,7 @@ img {
 	position: absolute;
 	content: "";
 	right: 0;
+	margin-top: 20px;
 }
 
 .decorated-zone::before {
@@ -191,34 +221,32 @@ img {
 	content: "";
 	left: 0;
 	bottom: 0;
-	margin-left: 30px;
-	margin-bottom: 20px;
+	margin-left: 22px;
+	margin-bottom: 22px;
 }
 
-.header__theme-menu-list::before {
+.rec::before {
 	position: absolute;
 	content: "";
 	width: 13px;
 	height: 13px;
-	box-shadow: 0 0 10px 2px var(--accent-color);
+	box-shadow: 0 0 4px 2px var(--accent-color);
 	background-color: var(--accent-color);
 	border-radius: 50%;
 	right: 0;
-	top: 0;
-	margin-top: 25px;
-	margin-right: 26px;
+	margin-top: 6px;
 }
 
-.header__theme-menu-list::after {
+.rec{
 	font-size: 18px;
 	font-weight: normal;
 	color: var(--accent-color);
 	position: absolute;
-	content: "REC";
 	right: 0;
 	top: 0;
 	margin-top: 20px;
-	margin-right: 50px;
+	margin-right: 27px;
+	padding-right: 20px;
 }
 
 @media (min-width: 376px) {
@@ -230,7 +258,7 @@ img {
 		max-width: 66%;
 	}
 
-	.header-tittle {
+	.tittle {
 		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 	}
 
@@ -291,7 +319,7 @@ img {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 
-	.header-tittle {
+	.tittle {
 		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 	}
 
