@@ -276,15 +276,15 @@ img {
 	.title_no_background {
 		width: 33%;
 	}
+
+	.paragraphs-how {
+		max-width: 66%;
+	}
 }
 
 @media (min-width: 769px) {
 	.title_no_background {
 		width: auto;
-	}
-
-	.paragraphs-how {
-		max-width: 66%;
 	}
 
 	.paragraphs-what {
