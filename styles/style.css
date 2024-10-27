@@ -236,7 +236,6 @@ img {
 }
 
 .rec{
-
 	font-size: 18px;
 	font-weight: normal;
 	color: var(--accent-color);
@@ -283,9 +282,6 @@ img {
 }
 
 @media (min-width: 769px) {
-	.title_no_background {
-		width: auto;
-	}
 
 	.paragraphs-what {
 		grid-template-columns: 1fr 1fr 1fr;
@@ -296,10 +292,15 @@ img {
 	}
 
 }
+
 @media (min-width: 1024px) {
 	.header__theme-menu {
 		align-self: start;
 		justify-self: center;
+	}
+
+	.title_no_background {
+		width: auto;
 	}
 
 	.article-picture {
