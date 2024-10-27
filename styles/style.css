@@ -20,7 +20,7 @@ img {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	padding: 0 20px;
+	padding: 0 clamp(10rem, 0.4337rem + 2.5510vw, 20rem);
 	background-image: var(--background-image);
 	/* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
@@ -122,7 +122,7 @@ img {
 	gap: 15px;
 }
 
-.article-main{
+.article-main {
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
@@ -235,7 +235,7 @@ img {
 	margin-top: 6px;
 }
 
-.rec{
+.rec {
 	font-size: 18px;
 	font-weight: normal;
 	color: var(--accent-color);
@@ -272,17 +272,12 @@ img {
 		margin-left: 50%;
 	}
 
-	.title_no_background {
-		width: 33%;
-	}
-
 	.paragraphs-how {
 		max-width: 66%;
 	}
 }
 
 @media (min-width: 769px) {
-
 	.paragraphs-what {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
@@ -317,6 +312,9 @@ img {
 		grid-column-end: 4;
 	}
 
+	.title_no_background {
+		width: 33%;
+	}
 }
 
 @media (min-width: 1024px) {
