@@ -1,5 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-* { outline: 1px solid red; }
+
 img {
 	object-position: center;
 	object-fit: cover;
