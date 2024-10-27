@@ -20,7 +20,7 @@ img {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	padding: 0 clamp(10rem, 0.4337rem + 2.5510vw, 20rem);
+	padding: 0 clamp(10px, 0.4337px + 2.551vw, 20px);
 	background-image: var(--background-image);
 	/* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
